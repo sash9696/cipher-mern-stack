@@ -1,0 +1,102 @@
+<!-- selectors -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* article p:first-of-type{
+            color: red;
+            font-size: 2rem;
+        } */
+
+        /* universal selector */
+
+        /* *{
+            color: gray;
+        } */
+
+        /* //type or tag selector */
+        /* article{
+            color: aqua;
+        } */
+
+        /* id selector # */
+        /* class selector .  */
+
+        /* attribute selector */
+
+        /* [data-type='primary']{
+            color: blueviolet;
+        } */
+      
+        /* href that containes .jpg */
+        /* [href*='.jpg']{
+            color: red;
+        } */
+
+
+        /* href that starts with my
+        [href^='my']{
+            color: red;
+        } */
+
+           /* href that ends with my */
+           /* [href$='jpg']{
+            color: red;
+        } */
+
+
+        /* pseudo clases => state, : and elements ::  => inserting new element in css*/
+
+        a:hover{
+            outline: 2px dotted green;
+        }
+
+        p:nth-child(even){
+            background: grey;
+        }
+
+        p::before{
+            content: 'Prefix - ';
+        }
+
+        p::selection{
+            background-color: blue;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <article>
+        <p>Lorem ipsum dolor sit amet, eum cupiditate ad deserunt facilis porro autem.</p>
+        <p> consectetur adipisicing elit. Similique corporis quidem fugit magni dicta eligendi esse, velit a repellendus culpa dolorum itaque et,</p>
+    </article>
+
+    <div data-type="primary">
+dkaklasdkaskdasduashiudhukashdkuadhsiuhdkuashku
+    </div>
+
+    <main>
+        <ul>
+            <li>
+                <a href="my-image.jpg">image</a>
+            </li>
+            <li>
+                <a href="my-doc.jpg">example doc</a>
+            </li>
+            <li>
+                <a href="my-document.jpg">example doc</a>
+            </li>
+        </ul>
+    </main>
+
+    <!-- simple selectors -->
+    <!-- id m classes , other attributes -->
+    
+</body>
+</html>

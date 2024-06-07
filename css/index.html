@@ -1,0 +1,133 @@
+<!-- cascade algo -->
+
+<!-- position and order of appearance -->
+<!-- the order in which ur css rules appear
+
+ -->
+
+
+<!-- specificity => algo determines which css selector is strongest -->
+<!-- 
+    weighting, scores
+
+    * universal selector has 0 points that means no specificity
+
+    an element (type) or pseudo element has 1 point specificity
+    /* class , pseudo class , attribute selector gets  10 points specificity */
+    id selector gets 100 points specificity
+    inline style attribute gets 1000 points specificity
+    !important rule  10000 points specificity
+
+
+ -->
+
+
+
+<!-- origin => the order when css appears and where it comes from i.e. is it a browser style
+or is it a css from some extension , our authorized css
+
+
+//from least to most specific
+
+user agent based styles => styles applied default to html elements
+local user styles =>os level, browser extension,custom css
+authored css => the css that we author
+authored !important =>
+local user styles => !important coming from os, browser level
+user agent => !important that are defined in default css , provided by the browser
+
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+/* 
+        button{
+            color: blue !important;
+        } */
+        /* #a{
+            color: gray;
+        }
+        .my-element{
+            color: red;
+        }
+
+        h1{
+            color: blue;
+        } */
+
+        /* *{
+            color: red;
+        }
+
+        .my-class{
+            color: aqua;
+        }
+
+        div{
+            color: gray;
+        } */
+
+        /* class , pseudo class , attribute selector gets  10 points specificity */
+
+        /* 11 points */
+        /* a.my-class{
+            color: green;
+
+        } */
+        /* 21 points */
+
+        a.my-class.another-class{
+            color: green;
+
+        }
+
+        /* 31 points */
+
+        /* a.my-class.another-class[href]{
+            color: green;
+
+        }
+        /* 41 points */
+
+        a.my-class.another-class[href]:hover{
+            color: green;
+
+        } */
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- <button style="color: green;">Send</button> -->
+
+    <!-- <h1 id="a" class="my-element">Heading</h1> -->
+
+    <div class="my-class">this is a div</div>
+
+    <a class="my-class">
+        <p>
+            this is a para
+        </p>
+    </a>
+
+    <a class="my-class another-class">
+        <p>
+            this is a para
+        </p>
+    </a>
+    
+</body>
+</html>
