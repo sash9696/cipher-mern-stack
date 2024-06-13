@@ -1,8 +1,9 @@
 
 import './App.css';
+import Experience from './components/Experience/Experience';
 import HomePage from './components/HomePage/HomePage';
 import Navbar from './components/Navbar/Navbar';
-
+import TechStack from './components/TechStack/TechStack';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
     <div className='app'>
         <Navbar/>
         <HomePage/>
+        <TechStack/>
+        <Experience/>
+
 
     </div>
   )
