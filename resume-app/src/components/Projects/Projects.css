@@ -1,0 +1,13 @@
+
+.projects_title{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects_box_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

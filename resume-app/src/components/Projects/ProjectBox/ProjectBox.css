@@ -1,0 +1,39 @@
+
+
+.project_box_container{
+    margin: 20px;
+    box-shadow: 0 5px 15px gray;
+    padding: 5px;
+    width: 500px;
+}
+
+.project_box_image_container > img{
+    width: 100%;
+}
+.project_box_description_container{
+    padding: 0 10px;
+}
+.project_box_title{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    color: red;
+}
+
+.project_box_sentences_container > p , .project_box_link{
+    font-size: 14px;
+}
+
+.project_box_link{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.project_box_link > span{
+    color: red;
+    font-weight: 700;
+    margin-right: 15px;
+}
+.project_box_link > a{
+    color: white;
+}
