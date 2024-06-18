@@ -31,7 +31,9 @@
     font-size: 13px;
 }
 .homepage_logo{
-    height: 60px;
+    width: 150px;
+
+    height: 150px;
     margin: 15px 0;
 }
 .homepage_left_button{

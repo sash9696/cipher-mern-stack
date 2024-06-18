@@ -18,6 +18,7 @@ function App() {
 //5. Projects
   return (
     <div className='app'>
+      
         <Navbar/>
         <HomePage/>
         <TechStack/>

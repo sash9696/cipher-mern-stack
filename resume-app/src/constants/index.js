@@ -57,16 +57,19 @@ export const techstackRowOne = [
     iconName: "C",
     iconImage: c,
     iconAltProperty: "cImage",
+    duration: 0.5,
   },
   {
     iconName: "Javascript",
     iconImage: js,
     iconAltProperty: "jsImage",
+    duration: 1,
   },
   {
     iconName: "CSS",
     iconImage: css,
     iconAltProperty: "cssImage",
+    duration: 1.5,
   },
 ];
 
@@ -75,16 +78,19 @@ export const techstackRowTwo = [
     iconName: "C",
     iconImage: c,
     iconAltProperty: "cImage",
+    duration: 1.5,
   },
   {
     iconName: "Javascript",
     iconImage: js,
     iconAltProperty: "jsImage",
+    duration: 0.5,
   },
   {
     iconName: "CSS",
     iconImage: css,
     iconAltProperty: "cssImage",
+    duration: 2.5,
   },
 ];
 

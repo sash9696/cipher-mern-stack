@@ -1,9 +1,11 @@
 *{
   margin: 0;
-  background-color: black;
+  /* background-color: black; */
   color: whitesmoke;
+
 }
 
 .app{
   padding: 0 9%;
+  background: linear-gradient(135.8deg, rgb(26, 26, 29) 27.1%, rgb(111, 34, 50) 77.5%);
 }
