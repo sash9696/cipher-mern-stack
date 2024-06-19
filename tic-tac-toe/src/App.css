@@ -1,0 +1,32 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.square{
+  background: white;
+  border: 1px solid grey;
+  font-size: 40px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  font-weight: bold;
+  margin-top: -4px;
+  margin-right: -4px;
+  line-height: 100px;
+  float: left;
+  padding: 0;
+
+}
+
+.status{
+  margin-bottom: 10px;
+}
+
+.board-row:after{
+  clear: both;
+  content: '';
+  display: table;
+}
