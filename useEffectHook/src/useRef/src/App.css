@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.app{
+  padding: 0 9%;
+}
