@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 
 connectDB();
 //user routes => /api/users and /api/user
+app.use(express.json()); //middleware to parse json
 app.use("/api", require("../routes/userRoutes"));
 
 mongoose.connection.once("open", () => {
