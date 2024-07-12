@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { AuthRoute, GuestRoute } from "./components";
+import { AuthRoute, GuestRoute, Navbar } from "./components";
 import { Auth, Home } from "./pages";
 
 function App() {
   return (
     <Router>
       <div>
-        <header>{/* <Navbar/> */}</header>
+        <header><Navbar/></header>
         <main>
           <Routes>
             <Route path="/" element={<Home/>} />
