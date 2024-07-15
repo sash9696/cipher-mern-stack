@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AuthRoute, GuestRoute, Navbar } from "./components";
-import { Auth, Home } from "./pages";
+import { Auth, Home, Settings } from "./pages";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
             </Route>
             {/* <Route path='/login' element={<h1>Login </h1>} /> */}
             <Route path="/settings" element={<AuthRoute />}>
-              <Route path="/settings" element={<h1>Settings </h1>} />
+              <Route path="/settings" element={<Settings/>} />
             </Route>
             <Route path="/editor" element={<AuthRoute />}>
               <Route path="/editor" element={<h1>Editor </h1>} />
