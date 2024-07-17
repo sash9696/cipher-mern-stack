@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { AuthRoute, GuestRoute, Navbar } from "./components";
-import { Auth, Editor, Home, Settings } from "./pages";
+import { Article, Auth, Editor, Home, Settings } from "./pages";
 import axios from "axios";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
               <Route path="/editor" element={<Editor/>} />
             </Route>
             <Route path="/editor/:slug" element={<h1>Editor </h1>} />
-            <Route path="/article/:slug" element={<h1>Article </h1>} />
+            <Route path="/article/:slug" element={<Article/>} />
             <Route path="/profile/:username" element={<h1>Profile </h1>} />
             <Route path="/@:username" element={<AuthRoute />}>
               <Route path="/@:username" element={<h1>Profile </h1>} />

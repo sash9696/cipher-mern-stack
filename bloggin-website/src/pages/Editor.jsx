@@ -1,36 +1,42 @@
-import { Form, Formik, Field } from 'formik'
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useQueryClient } from '@tanstack/react-query'
-import axios from 'axios'
-import { FormErrors, TagsInput } from '../components'
-import { useArticleQuery } from '../hooks'
+import { Form, Formik, Field } from "formik";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useQueryClient } from "@tanstack/react-query";
+import axios from "axios";
+import { FormErrors, TagsInput } from "../components";
+// import { useArticleQuery } from "../hooks";
+import useCreateArticle from "../hooks/useCreateArticle";
 
 function Editor() {
-  const navigate = useNavigate()
-//   const articleQuery = useArticleQuery()
-//   const queryClient = useQueryClient()
-//   const article = articleQuery?.data?.article || {}
-//   const { slug } = article
+  const navigate = useNavigate();
+//   const articleQuery = useArticleQuery();
+  const queryClient = useQueryClient();
+//   const article = articleQuery?.data?.article || {};
+//   const { slug } = article;
+
+  const { isCreating, createArticle } = useCreateArticle();
 
   async function onSubmit(values, { setErrors }) {
-    // try {
-    //   const { data } = await axios[slug ? 'put' : 'post'](`/articles${slug ? `/${slug}` : ''}`, { article: values })
+    try {
+    //   const { data } = await axios[slug ? "put" : "post"](
+    //     `/articles${slug ? `/${slug}` : ""}`,
+    //     { article: values }
+    //   );
+      createArticle({values})
 
-    //   if (slug) {
-    //     queryClient.invalidateQueries(`/articles/${slug}`)
-    //   } else {
-    //     queryClient.invalidateQueries('/articles')
-    //   }
+      if (slug) {
+        queryClient.invalidateQueries(`/articles/${slug}`);
+      } else {
+        queryClient.invalidateQueries("/articles");
+      }
 
-    //   navigate(`/article/${data?.article?.slug}`)
-    // } catch (error) {
-    //   const { status, data } = error.response
+    } catch (error) {
+      const { status, data } = error.response;
 
-    //   if (status === 422) {
-    //     setErrors(data.errors)
-    //   }
-    // }
+      if (status === 422) {
+        setErrors(data.errors);
+      }
+    }
   }
 
   return (
@@ -81,7 +87,10 @@ function Editor() {
                       <fieldset className="form-group">
                         <Field name="tagList" component={TagsInput} />
                       </fieldset>
-                      <button className="btn btn-lg pull-xs-right btn-primary" type="submit">
+                      <button
+                        className="btn btn-lg pull-xs-right btn-primary"
+                        type="submit"
+                      >
                         Publish Article
                       </button>
                     </fieldset>
@@ -93,7 +102,7 @@ function Editor() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Editor
+export default Editor;
